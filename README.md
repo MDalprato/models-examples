@@ -1,15 +1,10 @@
-# AI modesl
+# AI models
 
 This repo is a collection of various ai models that can be used to understand an learn a bit more about AI
 
 ![Country Western](country_western.png)
 
-## Table of demos
-  
-  - sentiment-analysis.py
-
-
-**sentiment-analysis.py**
+<h2 style="color: red;">sentiment-analysis.py</h2>
 
 This is a simple example of how to use "sentiment-analysis" template. This template provide a JSON output based on the input text.
 The output will be an array of JSON object following the current schema:
@@ -86,3 +81,11 @@ se sentiment will be a 0.99 POSTIVE one
     }
 ]
 ```
+
+Did I trigger your attention ?
+If you wan to try it you need to run the **sentiment-analysis.py** file and send a JSON object like the once in the examples to the 'localhost:5000/senntiment' route. As you can see in the code it's a POST request. 
+I personaly suggest to use POSTMAN for this.
+
+<h2 style="color: red;">fill-mask.py</h2>
+
+Fill mask is used to 'fill' text in a provided input
