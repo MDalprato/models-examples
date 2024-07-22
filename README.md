@@ -2,6 +2,8 @@
 
 This repo is a collection of various ai models that can be used to understand an learn a bit more about AI
 
+![Country Western](country_western.png)
+
 ## Table of Contents
 
 - [AI modesl](#ai-modesl)
