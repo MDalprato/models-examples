@@ -4,6 +4,11 @@ This repo is a collection of various ai models that can be used to understand an
 
 ![Country Western](country_western.png)
 
+<h2 style="color: red;">How to use them</h2>
+
+Every python file uses flask in order to create simple HTTP server, so if you wan to try it you need to run one of the files you just need to send a JSON object like the once in the examples to the 'localhost:5000/senntiment' route. As you can see in the code it's a POST request. 
+I personaly suggest to use POSTMAN for this.
+
 <h2 style="color: red;">sentiment-analysis.py</h2>
 
 This is a simple example of how to use "sentiment-analysis" template. This template provide a JSON output based on the input text.
@@ -83,9 +88,52 @@ se sentiment will be a 0.99 POSTIVE one
 ```
 
 Did I trigger your attention ?
-If you wan to try it you need to run the **sentiment-analysis.py** file and send a JSON object like the once in the examples to the 'localhost:5000/senntiment' route. As you can see in the code it's a POST request. 
-I personaly suggest to use POSTMAN for this.
 
 <h2 style="color: red;">fill-mask.py</h2>
 
-Fill mask is used to 'fill' text in a provided input
+Fill mask is used to 'fill' text in a provided input guessing which one will be the best one.
+Sames as before, just send a JSON payload as follow:
+
+```json
+{
+    "text": "Today I'm feeling <mask>"
+}
+````
+and you'll get an array of possibile Object as respose
+```json
+[
+    {
+        "score": 0.03881606459617615,
+        "sequence": "Today I'm feeling better",
+        "token": 357,
+        "token_str": " better"
+    },
+    {
+        "score": 0.03545308858156204,
+        "sequence": "Today I'm feeling fine",
+        "token": 2051,
+        "token_str": " fine"
+    },
+    {
+        "score": 0.033157315105199814,
+        "sequence": "Today I'm feeling good",
+        "token": 205,
+        "token_str": " good"
+    },
+    {
+        "score": 0.03189675137400627,
+        "sequence": "Today I'm feeling optimistic",
+        "token": 7168,
+        "token_str": " optimistic"
+    },
+    {
+        "score": 0.031621918082237244,
+        "sequence": "Today I'm feeling okay",
+        "token": 8578,
+        "token_str": " okay"
+    }
+]
+```
+This transformation pipeline is not the most realibale but for some basic guessing such as autocompliting textbox or similar function could be useful.
+
+<h2 style="color: red;">fill-mask.py</h2>
