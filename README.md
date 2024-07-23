@@ -2,7 +2,7 @@
 
 This repo is a collection of various ai models that can be used to understand an learn a bit more about AI
 
-![Country Western](country_western.png)
+![Country Western](assets/country_western.png)
 
 <h2 style="color: red;">How to use them</h2>
 
@@ -136,4 +136,24 @@ and you'll get an array of possibile Object as respose
 ```
 This transformation pipeline is not the most realibale but for some basic guessing such as autocompliting textbox or similar function could be useful.
 
-<h2 style="color: red;">fill-mask.py</h2>
+<h2 style="color: red;">object-detection.py</h2>
+
+Object detection is a complitely different task that require GPU and a little more effort. If you, like me, are using a mac you need to install 'timm' in order to use CPU insthead of GPU for image manipulation.
+
+So, please install:
+
+- pip3 install torch torchvision torchaudio
+- pip3 install timm
+
+Now you can send a JSON object with
+
+```json
+{
+    "imageUrl": "https://github.com/MDalprato/models-examples/blob/main/assets/cats.jpg?raw=true"
+}
+````
+and you'll get a beautiful image with some red boxes around the object that the pipeline was able to detect.
+As you can see below I've used the 'cats.jpg' image that you can find in the assets folder ... but you can try with all types of images that you need.
+
+
+![object-detection](assets/object-detection.output-postman.png)
