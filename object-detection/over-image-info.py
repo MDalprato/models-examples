@@ -16,10 +16,14 @@ app = Flask(__name__)
 @app.route('/object-dect', methods=['POST'])
 def analyze_image():
     # Extract text from request data
-    data = request.json
-    imageUrl = data.get('imageUrl')
-    image_data = requests.get(imageUrl, stream=True).raw
-    image = Image.open(image_data)
+    # data = request.json
+    # imageUrl = data.get('imageUrl')
+    # image_data = requests.get(imageUrl, stream=True).raw
+    # image = Image.open(image_data)
+    
+    
+    image = Image.open('/Users/marcodalprato/Pictures/camera02/20240717130012.jpg')
+
 
     # Allocate a pipeline for object detection
     object_detector = pipeline('object-detection')
