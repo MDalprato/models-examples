@@ -1,4 +1,4 @@
-# This script defines a Flask app that performs object detection on an image and returns the image with bounding boxes and labels drawn on it.
+# Description: This script defines a Flask app that performs object detection on an image.
 import requests
 from PIL import Image
 from transformers import pipeline
