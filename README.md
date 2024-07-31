@@ -144,6 +144,10 @@ So, please install:
 
 - pip3 install torch torchvision torchaudio
 - pip3 install timm
+- pip3 install requests
+- pip3 install Pillow
+- pip3 install Flask
+- pip3 install transformers
 
 Now you can send a JSON object with
 
