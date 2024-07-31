@@ -12,7 +12,7 @@ from flask import send_file
 app = Flask(__name__)
 
 # Define route for sentiment analysis
-@app.route('/mask', methods=['POST'])
+@app.route('/object-dect', methods=['POST'])
 def analyze_sentiment():
     # Extract text from request data
     data = request.json
